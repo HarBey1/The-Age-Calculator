@@ -55,7 +55,7 @@ button{
 .outputs-wrapper div{
     height: 100px;
     width: 100px;
-    border-radius: 5px;
+    border-radius: 55px;
     color: white;
     background-color: rgb(138, 0, 143);
     display: grid;
@@ -65,11 +65,27 @@ button{
     box-shadow: 20px 0px 20px 0px rgb(81, 70, 236);
 }
 span{
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 700;
 }
 p{
     font-size: 14px;
     color: pink;
     font-weight: 400;
+}
+.titl{
+    width: 60%;
+    background-color: rgb(138, 0, 143);
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 2%;
+    border-radius: 55px;
+    box-shadow: 30px 15px 20px 0px rgb(81, 70, 236);
+}
+h1{
+    text-align: center;
+    color: pink;
+    font-family: sans-serif;
+    font-weight: 900;
 }
