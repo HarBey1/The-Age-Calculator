@@ -1,9 +1,12 @@
 const months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+
 function ageCalculate(){
   let today = new Date();
   let inputDate = new Date(document.getElementById("date-input").value);
   let birthMonth,birthDate,birthYear;
-
+  
+// birthdetails object
   let birthDetails = {
     date: inputDate.getDate(),
     month: inputDate.getMonth()+1,
@@ -14,7 +17,6 @@ function ageCalculate(){
   let currenMonth = today.getMonth()+1;
   let currentDate = today.getDate();
 
-
   leapChecker(currentYear);
   
   if(birthDetails.year > currentYear || (birthDetails.month > currenMonth && birthDetails.year == currentYear) || (birthDetails.date > currentDate && birthDetails.month == currenMonth && birthDetails.year == currentYear)){
@@ -23,7 +25,7 @@ function ageCalculate(){
     return;
   }
   birthYear = currentYear - birthDetails.year;
-   
+   //Conditions
   if(currenMonth >= birthDetails.month){
     birthMonth = currenMonth - birthDetails.month;
   }
@@ -53,7 +55,7 @@ function displayResult(bDate,bMonth,bYear){
   document.getElementById("days").textContent = bDate;
 
 }
- 
+ // Set leap year
 function leapChecker(year){
   if(year % 4 == 0 || (year % 100 == 0 && year % 400 == 0))
   {
